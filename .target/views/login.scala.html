@@ -1,0 +1,17 @@
+@(userForm: Form[controllers.Application.Login])
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Login </h1>
+	@helper.form(action = routes.Application.postLogin()) {
+		@helper.inputText(userForm("email"));
+		@helper.inputPassword(userForm("password"));
+		<input type="submit">
+	}
+</body>
+</html>
